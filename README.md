@@ -31,7 +31,7 @@ When building this project, the builder assumes personal responsibility for trou
 
 Special thanks to
 - sqpat for his essential support of all my PC/AT related work!
-- kevju on VCF forum for giving me some useful time saving FPGA tips
+- kevju on VCF forum for giving me some useful time-saving FPGA tips about various topics including the usage of FET based bus switch and level conversion ICs
 - IBM corporation - the PC team led by Don Estridge
 - Intel corporation for creating these awesome legacy processors without which the PC/AT would not have existed!
 - see the PC/AT V1 project for many more people who all gave their support and inspired me greatly!
@@ -81,6 +81,6 @@ Thank you for your interest in reading this project description, more details wi
 
 Kind regards,
 
-Rodneys
+Rodney
 
 Last updated december 1st, 2025.
