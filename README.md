@@ -44,17 +44,18 @@ Thanks to sqpat for the friendly discussions and resulting joint effort to devel
 
 Acknowledgements of people who were instrumental in preceeding developments upon which this design was elaborated:
 
-[Don Estridge](https://www.ibm.com/ibm/history/exhibits/builders/builders_estridge.html)
-[IBM PC development team](https://www.ibm.com/ibm/history/exhibits/pc25/pc25_birth.html)
-[Some historical info](https://arstechnica.com/gadgets/2017/06/ibm-pc-history-part-1/)
-[Bill Lowe](https://www.ibm.com/ibm/history/exhibits/builders/builders_lowe.html)
+[Don Estridge](https://www.ibm.com/ibm/history/exhibits/builders/builders_estridge.html)  
+[IBM PC development team](https://www.ibm.com/ibm/history/exhibits/pc25/pc25_birth.html)  
+[Some historical info](https://arstechnica.com/gadgets/2017/06/ibm-pc-history-part-1/)  
+[Bill Lowe](https://www.ibm.com/ibm/history/exhibits/builders/builders_lowe.html)  
 
-[XT-IDE universal BIOS project development team for developing the XT-IDE BIOS](https://www.xtideuniversalbios.org)
+[XT-IDE universal BIOS project development team for developing the XT-IDE BIOS](https://www.xtideuniversalbios.org)  
 Amazing and extremely efficient software, fast disk access for XT and various AT computers.
-Works with every IDE drive I have tested. Still under active development earlier in 2023.
+Works with every IDE drive I have tested. Still under active development earlier in 2023.  
 
-All source data remains the copyright of the original creators and must be respected.
-This design is only released for hobby computing enthousiasts and educational purposes, no profit is to be made from this design or derived work from it.
+All source data remains the copyright of the original creators and must be respected.  
+
+This design is only released for hobby computing enthousiasts and educational purposes, no profit is to be made from this design or derived work from it.  
 
 ## Project outline  
 
@@ -62,7 +63,7 @@ This project is the 4th revision of my PC/AT development work, which started out
 
 I then proceeded to develop system control replacement in the CPLDs, extensively rewiring the REV1 PCB, after which I then assembled REV2 intermediate designs to reflect all the developed improvements and upgrades.  
 
-I then decided to release a final CPLD based mainboard project, the REV3D system, also fully featured here on GitHub.
+I then decided to release a final CPLD based mainboard project, the REV3D system, also fully featured here on GitHub.  
 Using CPLDs for this project was both frustrating and difficult because of logic limitations, however I finally managed to do it!
 So the REV3D system reflects a really stable and almost fully integrated complete implementation of a 80286 based PC/AT based on the IBM 5170, which now is able to run at 22.4MHz, including to run windows and RealDOOM as created by sqpat and featured here on GitHub.  
 Recommended VGA card is a cirrus logic, if possible a Diamond Speedstar pro.  
