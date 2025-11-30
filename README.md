@@ -68,7 +68,7 @@ Using CPLDs for this project was both frustrating and difficult because of logic
 So the REV3D system reflects a really stable and almost fully integrated complete implementation of a 80286 based PC/AT based on the IBM 5170, which now is able to run at 22.4MHz, including to run windows and RealDOOM as created by sqpat and featured here on GitHub.  
 Recommended VGA card is a cirrus logic, if possible a Diamond Speedstar pro.  
 
-After finalizing the REV3D project by supporting to run RealDOOM on the system with the kind assistance of sqpat here on GitHub, I have conceived a fully integrated PC/AT system which implemented all the bus logic inside the 5 CPLD chips on the REV3D board. The resulting design created a rock solid stable PC mainboard and served as the preparation basis for now developing this FPGA stage design.  
+After finalizing the REV3D project by supporting to run RealDOOM on the system with the kind assistance of sqpat here on GitHub, I have conceived a fully integrated PC/AT system which implemented all the bus logic inside the 5 CPLD chips on the REV3D board. The resulting design created a rock solid stable PC mainboard and serves as the preparation basis for now developing this FPGA stage design.  
 
 In this FPGA stage we will attempt to replace some of the PC/AT core controllers with FPGA recreations using a Cyclone II BGA chip with 672 pins. Other goals are a higher degree of system control, increasing both efficiency and clock speed of the Harris 80286 CPU.  
 
