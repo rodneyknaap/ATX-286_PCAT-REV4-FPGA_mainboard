@@ -1,4 +1,4 @@
-# ATX form factor 80286 AT mainboard PCB Rev 4
+# ATX form factor 80286 AT mainboard Rev 4
 
 An ATX FPGA based PC/AT mainboard evolved from the IBM 5170 PC/AT design principles which drove the PC industry standard forward with much momentum.
 A completely integrated PC/AT mainboard design using the 80286 CPU featuring a Cyclone II FPGA for bus logic, system control and much more.
