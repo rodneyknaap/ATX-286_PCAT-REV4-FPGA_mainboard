@@ -5,7 +5,7 @@ A completely integrated PC/AT mainboard design using the 80286 CPU featuring a C
 
 ## Current status(dec 2025): PCB and quartus project are under development.  
 
-![A photo of the KiCad work in progress to assemble all the 672 Altera FPGA pins out to the system.](FPGA_CONNECT_FIRST_SIDE.png)  
+![A photo of the KiCad work in progress to assemble all the 672 Altera FPGA pins out to the system.](CYCLONE_II_IO_FINISHED.png)  
 
 Keep an eye out at the bottom for the latest developments!  
 
