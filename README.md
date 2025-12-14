@@ -74,8 +74,20 @@ In this FPGA stage we will attempt to replace some of the PC/AT core controllers
 
 ## Project implementation  
 
-So far I have determined that the mainboard is going to need 8 layers to be able to bring out all the 450 user IO and for connecting the power supply voltages and other support pins for the FPGA chip.
-I am currently working on the PCB routing for the FPGA chip where the focus is on creating the connectivity into the chip, after which I will route the FPGA into FET bus switch logic ICs which then will interface between the selected 3.3V IO voltage of the FPGA and the 5V based PC/AT system and ISA slot connectors.
+I have changed the new mainboard PCB layout to include micro traces underneath the 672 pin BGA FPGA chip thanks to the idea of kevju on the VCF forum thread.
+This now enabled the layout to be realized in only 4 layers which will substantially reduce the PCB manufacturing costs for this project. 
+
+This REV4 FPGA iteration of the PC/AT development is not intended to become a pure FPGA/VHDL/Verilog based project because this would resemble emulation too much. Pure code based systems tend to progress into alternate structures where the original logic is lost and replaced by reduced versions in logic code. Examples can be found in combined projects that have the purpose of replacing an entire PC. So the system then becomes more an optimized description version where parts are no longer present. In this project we will aspire to retain a large part of the original 5170 system structure, as much as possible. The FPGA will still be based on a block design file which will serve as system control logic and bus interconnect amongst other things. At the same time we will have the power of FPGA logic to offer support to the PC/AT system. So this implementation is intended to be more nuanced where we only apply hardware language to replace components in the system of which the original circuits are unknown. In other words we have no alternative than to replace with hardware description language. A prime example of this are the core PC/AT controller chips, the 8042, 8237, 8259, 8254, RTC chip etc. These designs are unknown so we have no choice other than using VHDL/Verilog equivalents to perform those functions and integrate those controllers. However there we also will prefer to find code examples that make an effort to approximate the original function of the controller chip as accurately and completely as possible. So a higher level of integration is one of the design goals of this project.
+
+The FPGA chip has been fully routed now and ready to be wired into the system on the mainboard so the focus is also returned on elaborating the FPGA quartus project again and choosing the pin layout of the FPGA.  At the same time the mainboard layout will be developed/updated where we add level shifters and bus switch ICs to interface with the 5V logic connections of the system.
+
+So far we have removed the 74LS612 DMA page mapper and EMS page register SRAMs and replaced these in the FPGA project since now in the FPGA we have sufficient logic to replace these.
+
+Next I searched GitHub for a suitable 8237 DMAC replacement which I may have found in the very promising project by htminuslab, found at:
+https://github.com/htminuslab/HTL8237
+This project is different from most others where the creator has aspired to design the project very much true to the original 8237 DMA controller, which is very commendable!
+
+So I have worked to include the VHDL code of the HTL8237 project in our FPGA quartus project, which has now succeeded to compile the two DMAC ICs into the project and fully connect them to replace the functions. So we will try to use these code based DMA controllers instead of the originals and I have removed the DMAC ICs from the board. This also changes the DMA connectivity a lot so the board and quartus projects have been reworked to reflect the changes. The project is provisional to first determine to what level we will be able to replace core controllers, and then the focus will be to go over the entire project and verify everything. Currently the FPGA logic consumption with both HTL8237 DMACs included is around 5%. 
 
 Thank you for your interest in reading this project description, more details will follow on this page shortly!
 
@@ -83,4 +95,4 @@ Kind regards,
 
 Rodney
 
-Last updated december 1st, 2025.
+Last updated december 14th, 2025.
