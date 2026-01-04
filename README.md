@@ -102,15 +102,22 @@ HTL8259
 HTL8254
 HTL146818
 Aleksander Osman: (ao486 project)
-AO486 - PS2 keyboard/mouse controller (to be verified with MR BIOS!)
+AO486 - PS2 keyboard/mouse controller (to be verified with MR BIOS!)  
+
 I am working to integrate these into my single chip FPGA design and their original licenses can be found in the component subdirectories of the finished quartus projects.
-The source HDL code folders which have so far been found the most promising have been size reduced and uploaded here as ZIP files
+The source HDL code folders which have so far been found the most promising have been size reduced and uploaded here as ZIP files.  
+
+The reason for reducing the folder sizes is to be able to create a smaller complete quartus archive, please refer to search the similar named repositories here on GitHub where you can find the full details and elaborate documents etc provided by the original creators!
+
 I will contact the makers when this project is further along so it can better illustrate how the code would be used in this project.
 If you come across this project, thank you to all the creators for making these HDL recreations!
 
 So far the plan is to use these core AT controller HDL components, however if we could some day obtain the HDL sources used in originals, that would be even more amazing if these could be included.
-The idea was kindly suggested by costastep here on GitHub, thanks!
-This project aims for historical authenticity and also attempts to keep the PC/AT structure as created in the 5170 system preserved as much as possible and the necessary/desired functionality permits.
+The idea was kindly suggested by costastep here on GitHub, thanks!  
+
+This project aims particularly for historical authenticity and also attempts to keep the PC/AT structure as created in the 5170 system preserved as much as possible and the necessary/desired functionality permits.
+We want to preserve these historic systems as much as possible and for this reason I will attempt to combine HDL components with a quartus block design schematic which joins the complete system together.
+I am aware that this is not the advisable strategy of design but I will give it my best attempt to make this structure work correctly rather than resorting to a completely HDL based implementation which would subsequently provide much less insight into the original underlying technology. I may look into getting a kind of complete block schematic from HDL-only code which may also somewhat suffice in the latter case if this proves necessary to go that path.
 
 I am currently processing all the design elements in quartus, and assembling the PCB layout at the same time.
 After I get the pin configuration more complete, I will be able to determine a more definite location/orientation for the FPGA and more complete connectivity of the FPGA chip on the mainboard.
