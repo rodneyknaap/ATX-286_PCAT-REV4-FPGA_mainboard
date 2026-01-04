@@ -33,11 +33,11 @@ Special thanks to
 - sqpat for his essential support of all my PC/AT related work! And of course for his work on the RealDOOM project!
 - kevju on the VCF forum for giving me some useful time-saving FPGA tips about various topics including the usage of FET based bus switch and level conversion ICs and very helpful BGA PCB layout tips, FPGA power regulators.
 - marshallh on the VCF forum for giving me a lot of additional advice regarding FPGAs and Altera Cyclone chips, configuring the FPGA, usage of flash configuration ICs, and more.
-- IBM corporation - the PC team led by Don Estridge
-- Intel corporation for creating these awesome legacy processors without which the PC/AT would not have existed!
-- see the PC/AT V1 project for many more people who all gave their support and inspired me greatly!
-- costastep here on GitHub for providing useful ideas and background, see the "issue" thread
-- htminuslab (Hans Tiggeler) for creating such clear and transparent examples of the core AT controllers in HDL which inspired a lot of confidence on closer look at the code
+- IBM corporation - the PC team led by Don Estridge  
+- Intel corporation for creating these awesome legacy processors without which the PC/AT would not have existed!  
+- see the PC/AT V1 project for many more people who all gave their support and inspired me greatly!  
+- costastep here on GitHub for providing useful ideas and background, see the "issue" thread  
+- htminuslab (Hans Tiggeler) for creating such clear and transparent examples of the core AT controllers in HDL which inspired a lot of confidence on closer look at the code  
 
 Also a special thanks goes out to user LimeProgramming (Adam) here on GitHub for making his excellent USB to serial mouse project with the RP2040!
 https://github.com/LimeProgramming/USB-serial-mouse-adapter
@@ -96,12 +96,12 @@ So I have worked to include the VHDL code of the HTL8237 project in our FPGA qua
 I have searched more source code examples of recreations of the core AT controller IC replacements in order to integrate these into the one chip design Altera FPGA.
 So what I found so far is:
 
-htminuslab: (Hans Tiggeler)
-HTL8237
-HTL8259
-HTL8254
-HTL146818
-Aleksander Osman: (ao486 project)
+htminuslab: (Hans Tiggeler)  
+HTL8237  
+HTL8259  
+HTL8254  
+HTL146818  
+Aleksander Osman: (ao486 project)  
 AO486 - PS2 keyboard/mouse controller (to be verified with MR BIOS!)  
 
 I am working to integrate these into my single chip FPGA design and their original licenses can be found in the component subdirectories of the finished quartus projects.
