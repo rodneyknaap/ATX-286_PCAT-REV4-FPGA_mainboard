@@ -96,7 +96,7 @@ So I have worked to include the VHDL code of the HTL8237 project in our FPGA qua
 I have searched more source code examples of recreations of the core AT controller IC replacements in order to integrate these into the one chip design Altera FPGA.
 So what I found so far is:
 
-htminuslab - Hans Tiggeler:
+htminuslab - Hans Tiggeler:  
 HTL8237  
 HTL8259  
 HTL8254  
