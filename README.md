@@ -93,7 +93,7 @@ This project is different from most others where the creator has aspired to desi
 So I have worked to include the VHDL code of the HTL8237 project in our FPGA quartus project, which has now succeeded to compile the two DMAC ICs into the project and fully connect them to replace the functions. So we will try to use these code based DMA controllers instead of the originals and I have removed the DMAC ICs from the board. This also changes the DMA connectivity a lot so the board and quartus projects have been reworked to reflect the changes. The project is provisional to first determine to what level we will be able to replace core controllers, and then the focus will be to go over the entire project and verify everything. Currently the FPGA logic consumption with both HTL8237 DMACs included is around 5%. 
 
 ## Project update 4-1-2026
-I have searched more source code for possible core AT controller IC replacements in order to integrate these into the one chip design Altera FPGA.
+I have searched more source code examples of recreations of the core AT controller IC replacements in order to integrate these into the one chip design Altera FPGA.
 So what I found so far is:
 
 htminuslab: (Hans Tiggeler)
