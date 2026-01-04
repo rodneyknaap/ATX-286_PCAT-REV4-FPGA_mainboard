@@ -96,12 +96,12 @@ So I have worked to include the VHDL code of the HTL8237 project in our FPGA qua
 I have searched more source code examples of recreations of the core AT controller IC replacements in order to integrate these into the one chip design Altera FPGA.
 So what I found so far is:
 
-htminuslab: (Hans Tiggeler)  
+htminuslab - Hans Tiggeler:
 HTL8237  
 HTL8259  
 HTL8254  
 HTL146818  
-Aleksander Osman: (ao486 project)  
+ao486 project - Aleksander Osman:
 AO486 - PS2 keyboard/mouse controller (to be verified with MR BIOS!)  
 
 I am working to integrate these into my single chip FPGA design and their original licenses can be found in the component subdirectories of the finished quartus projects.
