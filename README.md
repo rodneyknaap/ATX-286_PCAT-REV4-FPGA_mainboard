@@ -101,7 +101,7 @@ HTL8237
 HTL8259  
 HTL8254  
 HTL146818  
-ao486 project - Aleksander Osman:
+ao486 project - Aleksander Osman:  
 AO486 - PS2 keyboard/mouse controller (to be verified with MR BIOS!)  
 
 I am working to integrate these into my single chip FPGA design and their original licenses can be found in the component subdirectories of the finished quartus projects.
