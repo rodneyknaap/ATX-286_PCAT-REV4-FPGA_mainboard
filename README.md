@@ -36,6 +36,8 @@ Special thanks to
 - IBM corporation - the PC team led by Don Estridge
 - Intel corporation for creating these awesome legacy processors without which the PC/AT would not have existed!
 - see the PC/AT V1 project for many more people who all gave their support and inspired me greatly!
+- costastep here on GitHub for providing useful ideas and background, see the "issue" thread
+- htminuslab (Hans Tiggeler) for creating such clear and transparent examples of the core AT controllers in HDL which inspired a lot of confidence on closer look at the code
 
 Also a special thanks goes out to user LimeProgramming (Adam) here on GitHub for making his excellent USB to serial mouse project with the RP2040!
 https://github.com/LimeProgramming/USB-serial-mouse-adapter
@@ -90,12 +92,38 @@ This project is different from most others where the creator has aspired to desi
 
 So I have worked to include the VHDL code of the HTL8237 project in our FPGA quartus project, which has now succeeded to compile the two DMAC ICs into the project and fully connect them to replace the functions. So we will try to use these code based DMA controllers instead of the originals and I have removed the DMAC ICs from the board. This also changes the DMA connectivity a lot so the board and quartus projects have been reworked to reflect the changes. The project is provisional to first determine to what level we will be able to replace core controllers, and then the focus will be to go over the entire project and verify everything. Currently the FPGA logic consumption with both HTL8237 DMACs included is around 5%. 
 
-Two FPGA chips are shipped by a Chinese chip dealer, hopefully they will arrive shortly.
+## Project update 4-1-2026
+I have searched more source code for possible core AT controller IC replacements in order to integrate these into the one chip design Altera FPGA.
+So what I found so far is:
 
-Thank you for your interest in reading this project description, more details will follow on this page shortly!
+htminuslab: (Hans Tiggeler)
+HTL8237
+HTL8259
+HTL8254
+HTL146818
+Aleksander Osman: (ao486 project)
+AO486 - PS2 keyboard/mouse controller (to be verified with MR BIOS!)
+I am working to integrate these into my single chip FPGA design and their original licenses can be found in the component subdirectories of the finished quartus projects.
+The source HDL code folders which have so far been found the most promising have been size reduced and uploaded here as ZIP files
+I will contact the makers when this project is further along so it can better illustrate how the code would be used in this project.
+If you come across this project, thank you to all the creators for making these HDL recreations!
+
+So far the plan is to use these core AT controller HDL components, however if we could some day obtain the HDL sources used in originals, that would be even more amazing if these could be included.
+The idea was kindly suggested by costastep here on GitHub, thanks!
+This project aims for historical authenticity and also attempts to keep the PC/AT structure as created in the 5170 system preserved as much as possible and the necessary/desired functionality permits.
+
+I am currently processing all the design elements in quartus, and assembling the PCB layout at the same time.
+After I get the pin configuration more complete, I will be able to determine a more definite location/orientation for the FPGA and more complete connectivity of the FPGA chip on the mainboard.
+
+In future plans I may also work on a PCI bus, or possibly to include the functionality of a fast VGA controller IC in the FPGA, which may make implementing PCI less urgent or critical to speed up the system.
+I have done some provisional reading about PCI and so far it looks like there will be some "intelligence" and arbitration required to control PCI cards, some memory to store the PCI functionality and data, caching for relaying the PCI data and of course, very important, BIOS support for the PCI functions. It seems that a FPGA would be very suitable, however the question is how to get to a full design, and whether the FPGA could provide sufficient free logic and memory space for the functions. PCI would need to interact with the interrupt controllers etc to drive the core AT interrupt inputs of the 8259 controllers so these can direct the CPU correctly. There is a lot involved and I am somewhat wondering whether a 286 CPU would be able to efficiently interact with a PCI BUS controller and the PCI cards it controls. Though I certainly would not want to exclude that this could be possible. There would be a lot of byte and memory space translation involved, though apparently a PCI bus is theoretically able to operate at any clock speed in the later iterations of the PCI standard.
+
+It's not excluded that the development work in this project may lead to an additional FPGA being used in the system at a later stage, for example for providing VGA video output.
+
+Thank you to all visitors here and in my other PC/AT projects for your interest in reading this project description, more details will follow on this page as soon as I have them!
 
 Kind regards,
 
 Rodney
 
-Last updated december 14th, 2025.
+Last updated january 4th, 2026.
